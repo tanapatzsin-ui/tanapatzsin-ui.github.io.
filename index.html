@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TanapatDev</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-6DBMCVL5RK"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-6DBMCVL5RK");
+    </script>
+
+    <style>
+      :root {
+        --primary-color: #f3f0e9;
+        --text-color: #4a443d;
+        --accent-color: #7a9d54;
+      }
+      body {
+        font-family: "Kanit", sans-serif;
+        margin: 0;
+        background-color: #fff9fb;
+        color: var(--text-color);
+      }
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+      }
+      /* Navbar */
+      .navbar {
+        background-color: #ffffff;
+        padding: 1rem 0;
+        border-bottom: 2px solid #fdf0f4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .navbar .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .nav-logo {
+        font-weight: 700;
+        font-size: 1.8rem;
+        color: var(--accent-color);
+      }
+      .nav-links {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        gap: 2rem;
+        font-weight: 500;
+      }
+      .nav-links a {
+        text-decoration: none;
+        color: var(--text-color);
+        transition: color 0.3s;
+      }
+      .nav-links a:hover,
+      .nav-links a.active {
+        color: var(--accent-color);
+      }
+
+      /* Product Section */
+      .product-section {
+        padding: 4rem 0;
+        text-align: center;
+      }
+      .product-section h1 {
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+      }
+      .product-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+      }
+      .product-card {
+        background-color: #ffffff;
+        border: 1px solid #fdf0f4;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        overflow: hidden;
+        text-align: left;
+        transition: transform 0.3s, box-shadow 0.3s;
+        display: flex;
+        flex-direction: column;
+      }
+      .product-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+      }
+      .product-image {
+        width: 100%;
+        height: 250px;
+        background-color: #eee;
+        background-size: cover;
+        background-position: center;
+      }
+      .product-info {
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+      }
+      .product-name {
+        font-size: 1.1rem;
+        font-weight: 500;
+        margin: 0.5rem 0;
+        flex-grow: 1;
+        min-height: 60px;
+      }
+      .product-price {
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: var(--accent-color);
+        margin-bottom: 1rem;
+      }
+      .add-to-cart-btn {
+        background-color: var(--accent-color);
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        width: 100%;
+        font-family: "Kanit", sans-serif;
+        font-size: 1rem;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: 500;
+        transition: background-color 0.3s;
+      }
+      .add-to-cart-btn:hover {
+        background-color: #d66086;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="container">
+        <div class="nav-logo">Tanapat</div>
+        <ul class="nav-links">
+          <li><a href="#">Test</a></li>
+          <li><a href="#" class="active">OUR PRODUCT</a></li>
+          <li><a href="#">OUR PHILOSOPHY</a></li>
+          <li><a href="#">CONTACT US</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="product-section">
+      <div class="container">
+        <h1>TANAPAT TEST PRODUCT</h1>
+        <div class="product-grid">
+          <div
+            class="product-card"
+            data-id="SKU001"
+            data-name="FEJKA เฟคก้า ไม้ประดิษฐ์ในกระถาง, ใน/นอกอาคาร ใบมอนสเตอรา, 12 ซม."
+            data-price="249"
+          >
+            <div
+              class="product-image"
+              style="
+                background-image: url('https://www.ikea.com/pimg/0959226_pe809439_s5.jpg?f=xl');
+              "
+            ></div>
+            <div class="product-info">
+              <p class="product-name">
+                FEJKA เฟคก้า ไม้ประดิษฐ์ในกระถาง, ใน/นอกอาคาร ใบมอนสเตอรา, 12
+                ซม.
+              </p>
+              <p class="product-price">฿249 THB</p>
+              <button class="add-to-cart-btn">หยิบใส่ตะกร้า</button>
+            </div>
+          </div>
+
+          <div
+            class="product-card"
+            data-id="SKU002"
+            data-name="FRIDFULL ฟรีดฟุล กระถางต้นไม้, ผักตบชวา, 12 ซม."
+            data-price="149"
+          >
+            <div
+              class="product-image"
+              style="
+                background-image: url('https://www.ikea.com/pimg/0635630_pe697292_s5.jpg?f=xl');
+              "
+            ></div>
+            <div class="product-info">
+              <p class="product-name">
+                FRIDFULL ฟรีดฟุล กระถางต้นไม้, ผักตบชวา, 12 ซม.
+              </p>
+              <p class="product-price">฿149 THB</p>
+              <button class="add-to-cart-btn">หยิบใส่ตะกร้า</button>
+            </div>
+          </div>
+
+          <div
+            class="product-card"
+            data-id="SKU003"
+            data-name="KAKTUSFIKON คอคทูส์ฟีคอน กระถางต้นไม้, หวาย, 12 ซม."
+            data-price="199"
+          >
+            <div
+              class="product-image"
+              style="
+                background-image: url('https://www.ikea.com/th/th/images/products/kaktusfikon-plant-pot-rattan__0919741_pe789478_s5.jpg?f=xl');
+              "
+            ></div>
+            <div class="product-info">
+              <p class="product-name">
+                KAKTUSFIKON คอคทูส์ฟีคอน กระถางต้นไม้, หวาย, 12 ซม.
+              </p>
+              <p class="product-price">฿199 THB</p>
+              <button class="add-to-cart-btn">หยิบใส่ตะกร้า</button>
+            </div>
+          </div>
+
+          <div
+            class="product-card"
+            data-id="SKU004"
+            data-name="FEJKA เฟคก้า ไม้ประดิษฐ์ในกระถาง, ใน/นอกอาคาร ไม้ยูคาลิปตัส, 15 ซม."
+            data-price="990"
+          >
+            <div
+              class="product-image"
+              style="
+                background-image: url('https://www.ikea.com/th/th/images/products/fejka-artificial-potted-plant-in-outdoor-eucalyptus__0674947_pe718059_s5.jpg?f=xl');
+              "
+            ></div>
+            <div class="product-info">
+              <p class="product-name">
+                FEJKA เฟคก้า ไม้ประดิษฐ์ในกระถาง, ใน/นอกอาคาร ไม้ยูคาลิปตัส, 15
+                ซม.
+              </p>
+              <p class="product-price">฿990 THB</p>
+              <button class="add-to-cart-btn">หยิบใส่ตะกร้า</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      // 1. ค้นหาปุ่ม "หยิบใส่ตะกร้า" ทั้งหมดในหน้าเว็บ
+      const allCartButtons = document.querySelectorAll(".add-to-cart-btn");
+
+      // 2. วนลูปเพื่อเพิ่ม Event Listener ให้กับทุกปุ่ม
+      allCartButtons.forEach((button) => {
+        button.addEventListener("click", function () {
+          // 3. ค้นหา product-card ที่เป็น cha ของปุ่มที่ถูกคลิก
+          const productCard = this.closest(".product-card");
+
+          // 4. ดึงข้อมูลสินค้าจาก data attributes ของ product-card
+          const productId = productCard.dataset.id;
+          const productName = productCard.dataset.name;
+          const productPrice = parseFloat(productCard.dataset.price);
+
+          console.log(`เพิ่ม '${productName}' ลงตะกร้า! กำลังส่งข้อมูล...`);
+          alert(`เพิ่ม "${productName}" ลงตะกร้าแล้ว`);
+
+          // 5. เรียกใช้คำสั่ง gtag เพื่อส่ง Event 'add_to_cart'
+          gtag("event", "add_to_cart", {
+            currency: "THB",
+            value: productPrice,
+            items: [
+              {
+                item_id: productId,
+                item_name: productName,
+                price: productPrice,
+                quantity: 1,
+              },
+            ],
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
